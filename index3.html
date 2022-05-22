@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Опитування</title>
+</head>
+<body text="#000000">
+<style type="text/css">
+    span.inlineBlock {
+        display: inline-block;
+        vertical-align: top;
+    }
+    body{
+        background: #d76d62;
+    }
+    #table{
+        box-shadow: black 0.5em 0.5em 0.3em;
+        border: solid thick red;
+        border-radius: 1em;
+    }
+    .header1 {
+        box-shadow: black 0.5em 0.5em 0.3em;
+        border: solid thick red;
+        border-radius: 1em;
+        height: 100px;
+        background: radial-gradient(#96433b, #d33838);
+    }
+    .main {
+        padding: 14px;
+        margin-top: 35px;
+        height: 120px;
+    }
+    .footer {
+        border: solid thick red;
+        border-radius: 1em;
+        box-shadow: black 0.5em 0.5em 0.3em;
+        height: 140px;
+        margin-top: 80px;
+        background: linear-gradient(to bottom, #ad5148 0%, #a21a1a 100%);
+        text-align: center;
+        font-size: 14px;
+    }
+    /* The side navigation menu */
+    .sidebar {
+        border: solid thick red;
+        border-radius: 1em;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #a21a1a;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+        display: block;
+        color: #000000;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    /* Active/current link */
+    .sidebar a.active {
+        background-color: #96433b;
+        color: white;
+    }
+
+    /* Links on mouse-over */
+    .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+    div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+    }
+
+    /* On screens that are less than 700px wide, make the sidebar into a topbar */
+    @media screen and (max-width: 700px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .sidebar a {
+            float: left;
+        }
+
+        div.content {
+            margin-left: 0;
+        }
+    }
+
+    /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+    @media screen and (max-width: 400px) {
+        .sidebar a {
+            text-align: center;
+            float: none;
+        }
+    }
+
+    .rr {
+        font-family: Pompadur, 'Comic Sans MS', cursive;
+    }
+
+    .colortext {
+        color: #a21a1a;
+    }
+
+    .colortext1 {
+        color: #38234d;
+    }
+</style>
+<!-- The sidebar -->
+<div class="sidebar">
+
+    <a href="index.html">Таблиця оцінювання</a>
+    <a href="index2.html">Форма реєстрації користувача.</a>
+    <a class="active" href="index3.html">Опитування.</a>
+</div>
+<!-- Page content -->
+<div class="content">
+    <div class="header1">
+
+    </div>
+    <div class="main">
+        <h1><span class="colortext">Сторінка опитування</h1></span>
+        <hr></hr>
+        <p><span class="colortext1"> Таблиця опитування користувача сайта. </span></p>
+    </div>
+
+    <br />
+    <br>
+    <form action="mailto:misacumak868@gmail.com" method="post" id="myform"></form>
+    <br><br><br><br><br><br><br><br>
+    <table id="table" align="center" width="90%" border="5px" bordercolor="red" bgcolor="#e84e18">
+        <thead>
+        <tr>
+            <th colspan="2">Опитування</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ваше ім'я</td>
+            <td><input type="text" name="Name" form="myform" required placeholder="name"></td>
+        </tr>
+        <tr>
+            <td>Стать</td>
+            <td>
+                <select required>
+                    <option value="1">Чоловік</option>
+                    <option value="2">Жінка</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ви з Рівного</td>
+            <td>
+                <input type="radio" name="rip" value="yes" />так
+                <input type="radio" name="rip" value="no" checked />ні
+            </td>
+        </tr>
+        <tr>
+            <td>Ваша освіта</td>
+            <td>
+                <select required>
+                    <option value="1">Не повна середня</option>
+                    <option value="2">Середня</option>
+                    <option value="3">Середня фахова</option>
+                    <option value="4">Не повна вища</option>
+                    <option value="5">Вища</option>
+                    <option value="6">Магістр</option>
+                    <option value="7">Професор</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Ваш рід занять</td>
+            <td>
+                <select required>
+                    <option value="1">Учень</option>
+                    <option value="2">Студент</option>
+                    <option value="3">Робітник/службовець</option>
+                    <option value="4">Пенсіонер</option>
+                    <option value="5">Безробітний</option>
+                    <option value="6">Магістр</option>
+                    <option value="7">Професор</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Операційна система якою користуєтесь</td>
+            <td>
+                <select required>
+                    <option value="1">Windows</option>
+                    <option value="2">Linux</option>
+                    <option value="3">Mac</option>
+                    <option value="4">Інша</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Виберіть</td>
+            <td>
+                <input type="radio" name="rpa" value="yes" checked /> Intel
+                <input type="radio" name="rpa" value="no" /> Amd
+            </td>
+        </tr>
+        <tr>
+            <td>Виберіть</td>
+            <td>
+                <input type="radio" name="rpia" value="yes" checked /> nVidia
+                <input type="radio" name="rpia" value="no" /> ATI
+            </td>
+        </tr>
+        <tr>
+            <td>Виберіть</td>
+            <td>
+                <input type="radio" name="rpap" value="yes" checked /> Android
+                <input type="radio" name="rpap" value="no" /> Iphone
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th align="right" colspan="2">
+                <input type="submit" name="add" form="myform" bgcollor="red" />
+                <input type="reset" name="pip" form="myform" />
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+
+    <br><br><br><br><br><br><br><br>
+    <div class="footer">
+        <br>
+        <h1>Сайт створено Чумаком Михайлом спеціально для Лабораторної роботи №13</h1>
+    </div>
+</div>
+
+</body>
+</html>
